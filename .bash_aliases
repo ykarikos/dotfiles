@@ -1,4 +1,19 @@
 
+function pscount () {
+    PSFILE=/tmp/ps-aux
+    
+    ps aux >$PSFILE
+    if [ "$1" == "" ]; then
+         # count all processes
+         grep -v ^USER $PSFILE | sort | cut -b -8 | uniq -c | sort -n
+    else 
+    	 # count processes with name $1 (e.g. SCREEN, tf or irssi)
+    	 egrep "[0-9] $1$" $PSFILE | cut -d' ' -f 1 | sort | uniq -c | sort -r
+    fi
+    rm $PSFILE
+}
+
+
 if [ "$HOST_COLOR" == "" ]; then
   export HOST_COLOR=32
 fi

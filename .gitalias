@@ -1,3 +1,6 @@
+[push]
+  default = upstream
+
 [color]
   status = auto
   branch = auto
@@ -15,3 +18,4 @@
   incoming = "!git remote update -p; git lg ..@{u}"
   outgoing = "!git lg @{u}.."
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+  fgrep = grep -F

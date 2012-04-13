@@ -34,7 +34,7 @@ esac
 export  PS1="\u@\[\e[1;${HOST_COLOR}m\]\h\[\e[0m\]:\w\$(__git_ps1 \" (%s)\")$ "
 alias d='ls -lA'
 
-export LESS=-iQFXRS
+export LESS=-iQFXR
 
 export BLOCK_SIZE='human-readable'
 

@@ -41,3 +41,5 @@ export BLOCK_SIZE='human-readable'
 if [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 fi
+
+alias webserver='python -m SimpleHTTPServer 8000'

@@ -1,4 +1,6 @@
 
+alias curl-head='curl -o /dev/null -sD -'
+
 function pscount () {
     PSFILE=/tmp/ps-aux
     

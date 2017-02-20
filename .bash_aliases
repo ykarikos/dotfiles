@@ -35,6 +35,7 @@ esac
 
 export  PS1="\u@\[\e[1;${HOST_COLOR}m\]\h\[\e[0m\]:\w\$(__git_ps1 \" (%s)\")$ "
 alias d='ls -lA'
+alias sr='screen -rd'
 
 export LESS=-iQFXR
 

@@ -33,6 +33,10 @@ case `uname -s` in
         ;;
 esac
 
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWCOLORHINTS=true
+
 export PS1="\u@\[\e[1;${HOST_COLOR}m\]\h\[\e[0m\]:\w\$(__git_ps1 \" (%s)\")$ "
 export PATH=$PATH:~/bin:/usr/local/sbin
 alias d='ls -lA'
@@ -47,6 +51,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 alias webserver='python -m SimpleHTTPServer 8000'
+
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi

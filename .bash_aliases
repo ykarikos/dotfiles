@@ -47,3 +47,6 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 alias webserver='python -m SimpleHTTPServer 8000'
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi

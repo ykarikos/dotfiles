@@ -47,3 +47,5 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 alias webserver='python -m SimpleHTTPServer 8000'
+
+export LC_ALL=en_US.UTF-8

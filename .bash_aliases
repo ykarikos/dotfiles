@@ -1,6 +1,10 @@
 
 alias curl-head='curl -o /dev/null -sD -'
 
+alias convert-date='date -ju -f "%FT%T" "+%a, %e %b %Y %T +0001"'
+alias iso-date-utc='date -u +"%Y-%m-%dT%H:%M:%SZ"'
+alias iso-date-local="date +%Y-%m-%dT%H:%M:%S%z"
+
 function pscount () {
     PSFILE=/tmp/ps-aux
     
@@ -26,7 +30,7 @@ case `uname -s` in
 	eval `lessfile`
 	;;
     Darwin)
-        alias ls='ls -FG'
+        alias ls='ls -FGh'
 	;;
     *)  
         alias ls='ls -Fh'

@@ -22,6 +22,36 @@
 
 [core]
   excludesfile = ~/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	attributesfile = /Users/ykk/.gitattributes
 
 [branch]
 	autosetuprebase = always
+[user]
+	email = yrjo.kari-koskinen@dias.fi
+	name = Yrjö Kari-Koskinen
+	signingkey = 2E7156C37760E735B175E0530E4EA2013B3ABE42
+
+[gpg]
+	program = gpg
+
+[includeIf "gitdir:~/src/private/"]
+	path = .dotfiles/.gitconfig-private
+[commit]
+	gpgsign = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[pull]
+	rebase = true
+[diff "clojure"]
+	xfuncname = (^\\(.*|\\s*\\(defn.*)

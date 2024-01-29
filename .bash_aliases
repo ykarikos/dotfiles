@@ -43,12 +43,15 @@ GIT_PS1_SHOWCOLORHINTS=true
 
 export PS1="\$(date '+%Y-%m-%d %H:%M:%S') [\$(kubectx -c)]\n\u@\[\e[1;${HOST_COLOR}m\]\h\[\e[0m\]:\w\$(__git_ps1 \" (%s)\")$ "
 export PATH=$PATH:~/bin:/usr/local/sbin
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
 alias d='ls -lA'
 alias sr='screen -rd'
 
 export LESS=-iQFXR
 
 export BLOCK_SIZE='human-readable'
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 if [ -f /etc/bash_completion ]; then
   . /etc/bash_completion

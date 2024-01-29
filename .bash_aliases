@@ -41,7 +41,7 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWCOLORHINTS=true
 
-export PS1="\u@\[\e[1;${HOST_COLOR}m\]\h\[\e[0m\]:\w\$(__git_ps1 \" (%s)\")$ "
+export PS1="\$(date '+%Y-%m-%d %H:%M:%S') [\$(kubectx -c)]\n\u@\[\e[1;${HOST_COLOR}m\]\h\[\e[0m\]:\w\$(__git_ps1 \" (%s)\")$ "
 export PATH=$PATH:~/bin:/usr/local/sbin
 alias d='ls -lA'
 alias sr='screen -rd'

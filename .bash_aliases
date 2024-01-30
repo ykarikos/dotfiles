@@ -51,7 +51,6 @@ alias sr='screen -rd'
 export LESS=-iQFXR
 
 export BLOCK_SIZE='human-readable'
-export BASH_SILENCE_DEPRECATION_WARNING=1
 
 if [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
@@ -60,6 +59,15 @@ fi
 alias webserver='python -m SimpleHTTPServer 8000'
 
 export LC_ALL=en_US.UTF-8
-if [ -f `brew --prefix`/etc/bash_completion ]; then
+
+# MacOS specific things here
+if [ `uname -s` == "Darwin" ]; then
+  export BASH_SILENCE_DEPRECATION_WARNING=1
+
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
+  fi
+
+  eval "$(direnv hook bash)"
+  test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 fi

@@ -59,6 +59,7 @@ fi
 alias webserver='python -m SimpleHTTPServer 8000'
 
 export LC_ALL=en_US.UTF-8
+export GPG_TTY=$(tty)
 
 # MacOS specific things here
 if [ `uname -s` == "Darwin" ]; then

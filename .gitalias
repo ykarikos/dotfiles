@@ -55,3 +55,5 @@
 	rebase = true
 [diff "clojure"]
 	xfuncname = (^\\(.*|\\s*\\(defn.*)
+[init]
+	defaultBranch = main
